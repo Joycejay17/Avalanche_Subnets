@@ -1,66 +1,41 @@
-## Foundry
+## Metacrafters Subnet Project
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+### Overview 
 
-Foundry consists of:
+Creating an EVM-Subnet on Avalanche Overview This project establishes an EVM Subnet on the Avalanche network named "manyuSubnet," featuring its native token, GamersTokens (MAJ). The network seamlessly integrates with MetaMask, enabling the deployment and interaction with smart contracts through the injected provider on Remix.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+### Project Features
 
-## Documentation
+#### ERC20 Token
 
-https://book.getfoundry.sh/
+- Minting new tokens: The platform should be able to create new tokens and distribute them to players as rewards. Only the owner can mint tokens.
 
-## Usage
+- Transferring tokens: Players should be able to transfer their tokens to others.
 
-### Build
+- Redeeming tokens: Players should be able to redeem their tokens for items in the in-game store.
 
-```shell
-$ forge build
-```
+- Checking token balance: Players should be able to check their token balance at any time.
 
-### Test
+- Burning tokens: Anyone should be able to burn tokens, that they own, that are no longer needed.
 
-```shell
-$ forge test
-```
+#### The Vault contract
 
-### Format
+- This is a simple contract to enable users get donations from one or more donors. A time lock is set and users can only claim after the lock time is expired.
 
-```shell
-$ forge fmt
-```
+## Getting Started
 
-### Gas Snapshots
+Follow these steps to get the project up and running on your local machine.
 
-```shell
-$ forge snapshot
-```
+**Prerequisites**
 
-### Anvil
+- Node.js and npm installed on your machine.
+- Clone the repository using the command - git clone https://github.com/username/projectname.git
+- Change directory into your project file - cd projectname
+- Install all dependencies with - npm install
+- Compile the contract using Hardhat - npx hardhat compile 
+- Run deployment script- npx hardhat run scripts/deploy.js  
+- Interact with the deployed contract through transactions like transfers, minting, and burning.
 
-```shell
-$ anvil
-```
+## Author
 
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+- Manyu Joy
